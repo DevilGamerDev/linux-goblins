@@ -1,0 +1,11 @@
+{
+    "info": {
+        "BOTNAME": "Linux Goblins",
+        "STATUS": "Gonna beat the competition",
+        "testing": true
+    },
+    "activeModules": {
+        "Developer": true,
+        "Developer Simulations": true
+      }
+}
