@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Goblin Support - Budget. Build. Beauty.</title>
+    <link href="_app/assets/asset1.css" rel="stylesheet">
+    <link href="_app/assets/asset2.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 5px 56px;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            color: text-neutral-400;
+            backdrop-blur-3xl;
+            background-color: rgba(0,0,0,0.1);
+        }
+        .header-links a {
+            color: text-neutral-200;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        .header-links a:hover {
+            color: text-neutral-50;
+        }
+        .support-container {
+            padding-top: 100px;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        .faq-section {
+            margin-top: 50px;
+        }
+        .faq-question {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #FFF;
+            cursor: pointer;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .faq-answer {
+            display: none;
+            color: #DDD;
+            text-align: left;
+            padding: 0 15px 10px;
+        }
+        .contact-form {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-field {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #CCC;
+            width: 300px;
+        }
+        .submit-button {
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #7b68ee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+    <div class="support-container">
+        <h1>Support & FAQs</h1>
+        <section class="faq-section">
+            <div class="faq-question">How to start building a PC?</div>
+            <div class="faq-answer">Start by selecting your budget, purpose, and preferred components...</div>
+            <div class="faq-question">Where can I find build guides?</div>
+            <div class="faq-answer">Build guides are available in our Build a PC section...</div>
+            <!-- Add more FAQs as needed -->
+        </section>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <input type="text" class="form-field" placeholder="Your Name">
+            <input type="email" class="form-field" placeholder="Your Email">
+            <textarea class="form-field" placeholder="Your Message"></textarea>
+            <button class="submit-button">Send Message</button>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
