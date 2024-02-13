@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linux Goblin - Budget. Build. Beauty.</title>
+    <link href="_app/assets/asset1.css" rel="stylesheet">
+    <link href="_app/assets/asset2.css" rel="stylesheet">
+    <style>
+        @keyframes fade {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .fading-text {
+            animation: fade 6s infinite;
+            opacity: 0; /* Start with text invisible */
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 5px 56px;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            color: text-neutral-400;
+            backdrop-blur-3xl;
+            background-color: rgba(0,0,0,0.1);
+        }
+        .header-links {
+            display: flex;
+            justify-content: flex-start;
+        }
+        .logo-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .confidence-section {
+            position: relative;
+        }
+        .logo-behind {
+            position: absolute;
+            max-width: 100px; /* Adjust based on your logo size */
+            opacity: 0.5; /* Adjust for desired transparency */
+            z-index: -1; /* Ensure it's behind the text */
+            left: 50%; /* Center horizontally */
+            top: 50%; /* Center vertically */
+            transform: translate(-50%, -50%); /* Adjust based on your logo size */
+        }
+        .floating-logo {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 20;
+        }
+        .floating-logo img {
+            height: 50px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body data-sveltekit-preload-data="hover">
+<div style="display: contents">
+    <header>
+        <div class="header-links">
+            <a class="mx-4 hover:text-neutral-200 hover-underline-animation bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-purple-500 font-extrabold after:scale-x-100 after:origin-bottom-left after:bg-gradient-to-r after:from-green-500 after:to-purple-500" href="https://www.google.com">Build a PC</a>
+            <a class="mx-4 hover:text-neutral-200" href="https://www.google.com">Invite Bot</a> 
+            <a class="mx-4 hover:text-neutral-200" href="https://www.google.com">Support</a>
+        </div>
+        <div class="logo-container">
+            <!-- Placeholder for centered logo if needed -->
+        </div>
+    </header>
+    <section class="pt-24 flex justify-start items-center flex-col text-center px-10 confidence-section">
+        <img src="imgs/logo.png" alt="Linux Goblin Logo" class="logo-behind">
+        <h2 class="text-2xl text-neutral-500 font-bold tracking-normal mt-32 bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400">Build with confidence.</h2>
+        <h1 class="text-8xl w-11/12 tracking-tighter font-extrabold mt-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400" style="font-family: 'Inter', monospace">Create A
+        <span class="divider"></span> 
+        <span class="bg-clip-text pr-0.5 tracking-tighter text-transparent bg-gradient-to-r from-green-500 to-purple-500" id="dynamicText">Budget.</span>
+        </h1>
+        <h2 class="w-4/12 text-xl leading-8 text-neutral-500 tracking-wide mt-10" style="animation: blink1 3s linear infinite">Linux Goblin is the #1 leading tool to build a beauty on a budget.</h2>
+        <div class="mt-14 flex">
+            <a class="text-white relative mx-3 rounded-lg z-1 bg-gradient-to-r from-neutral-100 to-neutral-300" href="https://www.google.com">
+                <div class="flex tracking-wide text-sm justify-center z-1 rounded-lg items-center bg-gradient-to-r from-neutral-950 to-neutral-750 text-black w-full h-full px-8 py-2.5 relative hover:bg-transparent hover:text-neutral-950">
+                    Join our Discord
+                </div>
+            </a>
+                        <a class="text-white relative mx-3 rounded-lg z-1 bg-gradient-to-r from-green-500 to-purple-500" href="https://www.google.com" style="padding: 1px">
+                <div class="flex tracking-wide text-sm justify-center z-1 rounded-lg items-center bg-neutral-950 w-full h-full px-8 py-2.5 relative hover:bg-transparent hover:text-neutral-950">Build a PC</div>
+            </a>
+                    </div>
+    </section>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D" class="floating-logo" target="_blank">
+        <img src="imgs/logo.png" alt="Linux Goblin Logo">
+    </a>
+    <script>
+        const words = ["Budget.", "Build.", "Beauty."];
+        const dynamicText = document.getElementById("dynamicText");
+        let currentWordIndex = 1; // Start from the second word after initial display
+    
+        function changeWord() {
+            dynamicText.classList.remove('fading-text');
+            void dynamicText.offsetWidth; // Trigger reflow to restart animation
+            dynamicText.classList.add('fading-text');
+            dynamicText.textContent = words[currentWordIndex++ % words.length];
+        }
+    
+        setInterval(changeWord, 4000); // Change word every 4 seconds
+    </script>
+</div>
+</body>
+</html>
