@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavBar } from '../../components';
 import "./index.css"
 
 export function LandingPage(props) {
@@ -7,15 +7,39 @@ export function LandingPage(props) {
         <html>
             <nav>
                 <div>
-                    <h1>Hellos</h1>
+                    <NavBar />
                 </div>
             </nav>
             <br />
             <br />
-            <br />
+ 
             <body>
                 <div class="main">
-                    <h1>Hellos</h1>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />

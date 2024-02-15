@@ -4,14 +4,22 @@ import App from "./App";
 import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";
 import { BrowserRouter as Router } from "react-router-dom";
 
+import { buttonTheme } from './components';
+
 const theme = extendTheme({
-  colors: {
-    lightblue: {
-      50: "#4ddbff",
-      100: "#4ddbff",
-      500: "#4ddbff"
-    },
-  },
+  components: { 
+      Button: buttonTheme
+   },
+   colors: {
+      brand: {
+        50: '#f7fafc',
+
+        500: '#718096',
+
+        900: '#171923',
+      }
+   }
+
 });
 
 ReactDom.render(
