@@ -1,45 +1,32 @@
 import React from "react";
-import { Button, ButtonGroup } from "@chakra-ui/react";
-import "./index.css";
+import "./Styles/index.css";
+import "./Styles/asset1.css";
 import logo from "../../images/logo.png";
+import { MenuData } from "./MenuData";
 
 export function NavBar() {
   return (
     <body>
-      <div class="navbar">
+      <nav class="navbar">
         <a href="/" class="logo">
           <img class="logo" src={logo} alt="" />
         </a>
-        {
-          <ul class="nav">
-            <ButtonGroup spacing="4">
-              <li>
-                <Button
-                  id="start"
-   
-                >
-                  Build A PC
-                </Button>
-              </li>
-              <li>
-                <Button
-                  id="about"
 
-                >
-                  About
-                </Button>
+        <ul className="nav">
+          {MenuData.map((item, index) => {
+            return (
+              <li key={index}>
+                <a href={item.url} className={item.cName}>
+                  {item.title}
+                </a>
               </li>
-              <li>
-                <Button
-                  id="support"
-                >
-                  Support
-                </Button>
-              </li>
-            </ButtonGroup>
-          </ul>
-        }
-      </div>
+            );
+          })}
+
+        </ul>
+        
+
+       </nav>
     </body>
   );
 }
