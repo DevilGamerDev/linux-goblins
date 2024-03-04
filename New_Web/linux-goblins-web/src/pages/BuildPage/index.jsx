@@ -6,20 +6,20 @@ import TextTransition, { presets } from 'react-text-transition';
 
 
 const styles = {
+    font: {
+        fontfamily: "Inter, monospace"
+    },
     animation: {
         animation: "blink1 3s linear infinite"
     },
     padding: {
         padding: "1px"
-    },
-    fontsize: {
-        fontsize: "1rem"
     }
 }
 
 
 
-export function LandingPage(props) {
+export function BuildPage(props) {
 
     const TEXTS = ["Budget.", "Build.", "Beauty."];
 
@@ -38,11 +38,13 @@ export function LandingPage(props) {
             <NavBar />
             <body>
                 <div class="main">
-                    <div class="flex justify-start items-center flex-col text-center px-10">
-                        <h2 class="text-2xl text-neutral-500 font-bold tracking-normal mt-32 bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-400">Build with confidence.</h2>
-                        <h1 class="text-8xl font-bold mt-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400" style={styles.fontsize}>Create A
-                            <TextTransition className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-purple-500" style={styles.fontsize}
+                    <div class="pt-24 flex justify-start items-center flex-col text-center px-10">
+                        <h2 class="text-2xl text-neutral-500 font-bold tracking-normal mt-32 bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400">Build with confidence.</h2>
+                        <h1 class="text-8xl w-11/12 tracking-tighter font-extrabold mt-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400" style={styles.font}>Create A
+                            <span class="divider"></span> 
+                            <TextTransition className="bg-clip-text pr-0.5 tracking-tighter text-transparent bg-gradient-to-r from-green-500 to-purple-500"
                                 springConfig={presets.gentle}>{TEXTS[index % TEXTS.length]}</TextTransition>
+            
                         </h1>
                         <h2 class="w-4/12 text-xl leading-8 text-neutral-500 tracking-wide mt-10" style={styles.animation}>Linux Goblin is the #1 leading tool to build a beauty on a budget.</h2>
                         <div class="mt-14 flex">
