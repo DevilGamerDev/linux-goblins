@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #pc-parts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .part-card {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PC Builder</h1>
+        <div id="pc-parts"></div>
+    </div>
+
+    <script>
+        // Fetch PC parts from PC Part Picker API
+        fetch('https://api.pcpartpicker.com/api/list/part')
+            .then(response => response.json())
+            .then(data => {
+                const pcPartsContainer = document.getElementById('pc-parts');
+                data.forEach(part => {
+                    const partCard = document.createElement('div');
+                    partCard.classList.add('part-card');
+                    partCard.innerHTML = `
+                        <h2>${part.name}</h2>
+                        <p>Price: $${part.price}</p>
+                        <p>Category: ${part.category}</p>
+                        <p>Retailer: ${part.retailer}</p>
+                        <p>Link: <a href="${part.url}" target="_blank">View</a></p>
+                    `;
+                    pcPartsContainer.appendChild(partCard);
+                });
+            })
+            .catch(error => console.error('Error fetching PC parts:', error));
+    </script>
+</body>
+</html>
