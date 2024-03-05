@@ -1,7 +1,7 @@
 import React from "react";
 import { NavBar } from '../../components';
 import "./index.css"
-import "./asset1.css"
+//import "./asset1.css"
 import TextTransition, { presets } from 'react-text-transition';
 
 

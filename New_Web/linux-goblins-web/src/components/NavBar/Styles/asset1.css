@@ -1,10 +1,3 @@
-
-
-:before,:after {
-    --tw-content: ""
-}
-
-
 *,:before,:after {
     --tw-border-spacing-x: 0;
     --tw-border-spacing-y: 0;
@@ -15,19 +8,9 @@
     --tw-skew-y: 0;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
-    --tw-pan-x: ;
-    --tw-pan-y: ;
-    --tw-pinch-zoom: ;
     --tw-scroll-snap-strictness: proximity;
     --tw-gradient-from-position: ;
-    --tw-gradient-via-position: ;
     --tw-gradient-to-position: ;
-    --tw-ordinal: ;
-    --tw-slashed-zero: ;
-    --tw-numeric-figure: ;
-    --tw-numeric-spacing: ;
-    --tw-numeric-fraction: ;
-    --tw-ring-inset: ;
     --tw-ring-offset-width: 0px;
     --tw-ring-offset-color: #fff;
     --tw-ring-color: rgb(59 130 246 / .5);
@@ -35,51 +18,58 @@
     --tw-ring-shadow: 0 0 #0000;
     --tw-shadow: 0 0 #0000;
     --tw-shadow-colored: 0 0 #0000;
-    --tw-blur: ;
-    --tw-brightness: ;
-    --tw-contrast: ;
-    --tw-grayscale: ;
-    --tw-hue-rotate: ;
-    --tw-invert: ;
-    --tw-saturate: ;
-    --tw-sepia: ;
-    --tw-drop-shadow: ;
-    --tw-backdrop-blur: ;
-    --tw-backdrop-brightness: ;
-    --tw-backdrop-contrast: ;
-    --tw-backdrop-grayscale: ;
-    --tw-backdrop-hue-rotate: ;
-    --tw-backdrop-invert: ;
-    --tw-backdrop-opacity: ;
-    --tw-backdrop-saturate: ;
-    --tw-backdrop-sepia:
 }
 
 
-.mx-4{margin-left:1rem;margin-right:1rem}
-
-.hover-underline-animation{display:inline-block;position:relative}
-
-.hover-underline-animation:after{border-radius:.25rem;background-image:linear-gradient(to right,var(--tw-gradient-stops));--tw-gradient-from: #f5f5f5 var(--tw-gradient-from-position);--tw-gradient-to: rgb(245 245 245 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);--tw-gradient-to: #d4d4d4 var(--tw-gradient-to-position);content:"";position:absolute;width:100%;transform:scaleX(0);height:2px;bottom:-1px;left:0;transform-origin:bottom right;transition:transform .25s ease-out}
-
-.hover-underline-animation:hover:after{transform:scaleX(1);transform-origin:bottom left}@keyframes blink1{8%{opacity:0}15%{opacity:0}20%{opacity:1}95%{opacity:1}to{opacity:1}}
-
-.bg-clip-text{-webkit-background-clip:text;background-clip:text}
-
-.text-transparent{color:transparent}
-
-.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}
+.mx-4 {
+    margin-left:1rem;
+    margin-right:1rem
+}
 
 .from-green-500{--tw-gradient-from: #22c55e var(--tw-gradient-from-position);--tw-gradient-to: rgb(34 197 94 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)}
 
 .to-purple-500{--tw-gradient-to: #a855f7 var(--tw-gradient-to-position)}
 
-.font-extrabold{font-weight:800}
+.hover\:text-neutral-200:hover {
+    --tw-text-opacity: 1;
+    color:rgb(229 229 229 / var(--tw-text-opacity))
+}
 
-.after\:origin-bottom-left:after{content:var(--tw-content);transform-origin:bottom left}
+.hover-underline-animation {
+    display:inline-block;
+    position:relative
+}
 
-.after\:scale-x-100:after{content:var(--tw-content);--tw-scale-x: 1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+.hover-underline-animation:after { 
+    border-radius:.25rem;
+    background-image:linear-gradient(to right,var(--tw-gradient-stops));
+    --tw-gradient-from: #f5f5f5 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(245 245 245 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: #d4d4d4 var(--tw-gradient-to-position);
+    content:"";
+    position:absolute;
+    width:100%;
+    transform:scaleX(0);
+    height:2px;
+    bottom:-1px;
+    left:0;
+    transform-origin:bottom right;
+    transition:transform .25s ease-out
+}
 
-.after\:bg-gradient-to-r:after{content:var(--tw-content);background-image:linear-gradient(to right,var(--tw-gradient-stops))}
+.cool-color {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    font-weight:800;
+}
 
-.hover\:text-neutral-200:hover{--tw-text-opacity: 1;color:rgb(229 229 229 / var(--tw-text-opacity))}
+.hover-underline-animation:hover:after {
+    transform:scaleX(1);
+    transform-origin:bottom left
+}
+
+
+

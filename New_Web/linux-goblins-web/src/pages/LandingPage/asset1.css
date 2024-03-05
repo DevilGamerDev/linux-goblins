@@ -63,7 +63,7 @@ line-height:2rem}
 
 .text-8xl{
     font-size:6rem;
-    line-height:1
+    line-height:0.85
 }
 
 .text-xl{font-size:1.25rem;
@@ -84,3 +84,9 @@ color:rgb(229 229 229 / var(--tw-text-opacity))}
 
 .hover\:text-neutral-950:hover{--tw-text-opacity: 1;
 color:rgb(10 10 10 / var(--tw-text-opacity))}
+
+.bg-clip-text{-webkit-background-clip:text;background-clip:text}
+
+.text-transparent{color:transparent}
+
+.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}
