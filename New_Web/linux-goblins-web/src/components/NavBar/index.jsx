@@ -7,9 +7,9 @@ import { MenuData } from "./MenuData";
 export function NavBar() {
   return (
     <body>
-      <nav class="navbar">
-        <a href="/" class="logo">
-          <img class="logo" src={logo} alt="" />
+      <nav className="navbar">
+        <a href="/" className="logo">
+          <img className="logo" src={logo} alt="" />
         </a>
 
         <ul className="nav">

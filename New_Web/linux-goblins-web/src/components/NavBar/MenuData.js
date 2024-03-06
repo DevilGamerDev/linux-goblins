@@ -10,11 +10,6 @@ export const MenuData = [
         cName: "nav-links mx-4 cool-color hover:text-neutral-200 hover-underline-animation from-green-500 to-purple-500 after:from-green-500 after:to-purple-500",
     },
     {
-        title: "About",
-        url: "/about",
-        cName: "nav-links mx-4 hover:text-neutral-200 hover-underline-animation",
-    },
-    {
         title: "Support",
         url: "/support",
         cName: "nav-links mx-4 hover:text-neutral-200 hover-underline-animation",
