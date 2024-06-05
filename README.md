@@ -1,1 +1,1 @@
-![website](https://github.com/DylanTippett/LinuxGoblins/assets/144135847/65870147-bad1-49f2-883c-83fb98db530b)
+![Untitledvideo-MadewithClipchamp-ezgif com-video-to-gif-converter](https://github.com/DylanTippett/LinuxGoblins/assets/144135847/4b95a226-f612-4909-8644-4ded8d7a7f11)
